@@ -29,33 +29,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-chocolate text-[hsl(var(--cream))]">
-        <div className="mx-auto max-w-[90rem] grid lg:grid-cols-2 items-center">
-          <img src={IMG.rolling} alt="Rolled ice cream being made fresh" loading="lazy" className="h-full w-full object-cover aspect-[4/3]" />
-          <div className="p-8 md:p-16">
-            <Reveal>
-              <h2 className="font-display font-bold text-3xl md:text-5xl">More Than Dessert</h2>
-              <p className="mt-5 text-[hsl(var(--cream))]/85 text-lg leading-relaxed">
-                Customers visit Happy Rolls for the flavours, but they return for the experience. Friendly service, fresh preparation and creative menu items have helped Happy Rolls become a favourite dessert destination in Ottawa.
-              </p>
-              <Btn to="/menu" variant="strawberry" size="lg" className="mt-8">View the Menu</Btn>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-[90rem] px-6">
-          <Reveal><SectionTitle eyebrow="Behind the scenes" center>Every Dessert, Made With Care</SectionTitle></Reveal>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {GRID.map((g, i) => (
-              <Reveal key={i} delay={i * 50}>
-                <img src={g.img} alt={g.alt} loading="lazy" className="rounded-3xl object-cover aspect-[4/3] w-full shadow-sm" />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+    
     </Layout>
   );
 }
