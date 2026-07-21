@@ -62,17 +62,21 @@ export default function MenuPage() {
     </button>
   )}
 
-  {MENU.map((category) => (
-    <button
-      key={category.id}
-      type="button"
-      onClick={() => scrollToSection(category.id)}
-      className="rounded-full bg-[hsl(var(--cream))]/10 hover:bg-strawberry px-5 py-2.5 font-display font-semibold transition-colors"
-    >
-      {category.title}
-    </button>
-  ))}
-</div>
+              {MENU.map((category) => (
+              <button
+                key={category.id}
+                type="button"
+                onClick={() =>
+                  scrollToSection(category.id)
+                }
+                className="rounded-full bg-[hsl(var(--cream))]/10 hover:bg-strawberry px-5 py-2.5 font-display font-semibold transition-colors"
+              >
+                {category.title}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {isJuly && (
         <section
