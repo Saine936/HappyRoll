@@ -142,10 +142,12 @@ export default function HomePage() {
   <div className="mx-auto max-w-[90rem] px-6 py-5 md:py-6 text-center">
     <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
       <div className="flex items-center gap-2">
-        <Star
-          className="h-5 w-5 text-caramel fill-caramel"
-          strokeWidth={1.5}
-        />
+       <span
+  className="text-2xl leading-none text-caramel"
+  aria-hidden="true"
+>
+  ★
+</span>
 
         <span className="font-display text-2xl leading-none">
           {RATING}
