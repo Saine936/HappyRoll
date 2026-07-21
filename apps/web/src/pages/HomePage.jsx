@@ -31,6 +31,8 @@ import {
   todayHours,
 } from "@/lib/site";
 
+import happyRollsLocation from "@/assets/happyrolls.png";
+
 const POPULAR_ITEMS = [
   {
     name: "Rolled Ice Cream",
@@ -386,11 +388,11 @@ export default function HomePage() {
             />
 
             <img
-              src={IMG.storefront}
-              alt="Happy Rolls storefront in Ottawa"
-              loading="lazy"
-              className="w-full h-48 object-cover rounded-3xl"
-            />
+               src={happyRollsLocation}
+               alt="Happy Rolls storefront in Ottawa"
+               loading="lazy"
+               className="w-full h-48 object-cover rounded-3xl"
+/>
           </Reveal>
         </div>
       </section>

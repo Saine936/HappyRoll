@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Phone, MapPin, Copy, Check, UtensilsCrossed } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
+import happyRollsLocation from "@/assets/happyrolls.png";
 import { Btn, Reveal, SectionTitle } from '@/components/Ui';
 import { IMG, HOURS, PHONE, PHONE_TEL, ADDRESS_LINE1, ADDRESS_LINE2, ADDRESS_CITY, MAP_EMBED, GOOGLE_MAPS_URL, todayHours } from '@/lib/site';
 
@@ -53,7 +54,12 @@ export default function VisitPage() {
 
           <Reveal className="space-y-4">
             <iframe title="Happy Rolls location" src={MAP_EMBED} className="w-full h-80 rounded-3xl border border-border" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-            <img src={IMG.storefront} alt="Happy Rolls storefront on Wellington Street West to help locate the entrance" loading="lazy" className="w-full h-64 object-cover rounded-3xl" />
+            <img
+              src={happyRollsLocation}
+              alt="Happy Rolls storefront in Ottawa"
+              loading="lazy"
+              className="w-full h-48 object-cover rounded-3xl"
+/>
           </Reveal>
         </div>
       </section>
