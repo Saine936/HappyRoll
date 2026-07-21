@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
   workflow_dispatch:
 
 permissions:
@@ -17,8 +16,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-deploy:
+    name: Build and deploy website
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Download repository
@@ -36,7 +40,7 @@ jobs:
       - name: Build website
         run: npm run build
 
-      - name: Set up GitHub Pages
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Upload built website
