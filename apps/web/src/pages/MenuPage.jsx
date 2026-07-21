@@ -22,6 +22,16 @@ import {
 export default function MenuPage() {
   const currentMonth = new Date().getMonth();
   const isJuly = currentMonth === 6;
+  const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId);
+
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
 
   return (
     <Layout>
@@ -42,27 +52,27 @@ export default function MenuPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {isJuly && (
-              <a
-                href="#featured"
-                className="rounded-full bg-strawberry px-5 py-2.5 font-display font-semibold transition-transform hover:scale-105"
-              >
-                July Feature
-              </a>
-            )}
+  {isJuly && (
+    <button
+      type="button"
+      onClick={() => scrollToSection("featured")}
+      className="rounded-full bg-strawberry px-5 py-2.5 font-display font-semibold transition-all hover:scale-105"
+    >
+      July Feature
+    </button>
+  )}
 
-            {MENU.map((category) => (
-              <a
-                key={category.id}
-                href={`#${category.id}`}
-                className="rounded-full bg-[hsl(var(--cream))]/10 hover:bg-strawberry px-5 py-2.5 font-display font-semibold transition-colors"
-              >
-                {category.title}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+  {MENU.map((category) => (
+    <button
+      key={category.id}
+      type="button"
+      onClick={() => scrollToSection(category.id)}
+      className="rounded-full bg-[hsl(var(--cream))]/10 hover:bg-strawberry px-5 py-2.5 font-display font-semibold transition-colors"
+    >
+      {category.title}
+    </button>
+  ))}
+</div>
 
       {isJuly && (
         <section
