@@ -54,12 +54,15 @@ export default function VisitPage() {
 
           <Reveal className="space-y-4">
             <iframe title="Happy Rolls location" src={MAP_EMBED} className="w-full h-80 rounded-3xl border border-border" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+           <div className="rounded-3xl bg-forest/10 p-4">
             <img
               src={happyRollsLocation}
               alt="Happy Rolls storefront in Ottawa"
               loading="lazy"
-              className="w-full h-48 object-cover rounded-3xl"
-/>
+              className="w-full max-w-sm mx-auto h-auto rounded-2xl object-contain"
+            />
+          </div>
+
           </Reveal>
         </div>
       </section>
