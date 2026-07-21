@@ -9,6 +9,7 @@ import {
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import { Btn, Reveal } from "@/components/Ui";
+import birthdayCakeImage from "@/assets/BirthdayCake.svg";
 
 import {
   MENU,
@@ -22,10 +23,8 @@ export default function MenuPage() {
   const currentMonth = new Date().getMonth();
   const isJuly = currentMonth === 6;
 
-  const featuredImage = `${
-    import.meta.env.BASE_URL
-  }BirthdayCake.svg`;
-
+  const featuredImage = birthdayCakeImage;
+  
   return (
     <Layout>
       <Seo
