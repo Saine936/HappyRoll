@@ -27,7 +27,7 @@ export default function Header() {
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${solid ? 'bg-background/92 backdrop-blur-md border-b border-border/70' : 'bg-transparent'}`}>
       <div className="mx-auto max-w-[90rem] px-5 sm:px-8 flex items-center justify-between h-[70px] md:h-[86px]">
         <Link to="/" className="flex items-center gap-3 group" aria-label="Happy Rolls home">
-          <img src="/logo.svg" alt="Happy Rolls" className="h-11 w-11 md:h-12 md:w-12 transition-transform duration-500 group-hover:scale-105" />
+          <img src="/happyrolllogo.jpg" alt="Happy Rolls" className="h-11 w-11 md:h-12 md:w-12 transition-transform duration-500 group-hover:scale-105" />
           <span className={`font-display font-semibold text-lg md:text-xl tracking-tight transition-colors ${solid ? 'text-forest' : 'text-white drop-shadow-sm'}`}>Happy Rolls</span>
         </Link>
 
