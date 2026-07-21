@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[90rem] px-6 sm:px-8 py-16 md:py-20 grid gap-12 md:grid-cols-12">
         <div className="md:col-span-4">
           <div className="flex items-center gap-3">
-            <img src="/logo.svg" alt="Happy Rolls" className="h-16 w-16" />
+            <img src="/happyrolllogo.jpg" alt="Happy Rolls" className="h-16 w-16" />
             <div>
               <div className="font-display text-2xl text-[hsl(var(--cream))]">Happy Rolls</div>
               <p className="text-xs uppercase tracking-luxe text-[hsl(var(--cream))]/60 mt-1">Ottawa · Dessert Café</p>
