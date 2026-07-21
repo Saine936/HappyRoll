@@ -23,8 +23,6 @@ export default function MenuPage() {
   const currentMonth = new Date().getMonth();
   const isJuly = currentMonth === 6;
 
-  const featuredImage = birthdayCakeImage;
-
   return (
     <Layout>
       <Seo
@@ -75,11 +73,11 @@ export default function MenuPage() {
             <Reveal>
               <div className="overflow-hidden rounded-[2rem] bg-card border border-strawberry/30 shadow-xl">
                 <div className="grid md:grid-cols-2">
-                  <div className="relative min-h-[320px] md:min-h-[500px]">
+                  <div className="relative h-[380px] md:h-[500px] overflow-hidden">
                     <img
-                      src={featuredImage}
+                      src={birthdayCakeImage}
                       alt="Birthday Cake Banana Pudding"
-                      className="absolute inset-0 h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover object-[center_70%]"
                     />
 
                     <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-strawberry px-4 py-2 text-sm font-display font-semibold text-white shadow-md">
