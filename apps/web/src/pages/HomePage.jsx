@@ -2,6 +2,7 @@ import React from "react";
 import {
   MapPin,
   Phone,
+  Star,
   UtensilsCrossed,
 } from "lucide-react";
 
@@ -136,31 +137,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Google reviews */}
-      <div className="bg-forest text-[hsl(var(--cream))]">
-        <div className="mx-auto max-w-[90rem] px-6 py-6 flex flex-col sm:flex-row items-center justify-center gap-x-8 gap-y-3 text-center">
-          <div className="flex items-center gap-3">
-            <Stars className="h-5 w-5 text-[hsl(var(--cream))]" />
+      {/* Google rating */}
+<div className="bg-forest text-[hsl(var(--cream))]">
+  <div className="mx-auto max-w-[90rem] px-6 py-5 md:py-6 text-center">
+    <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+      <div className="flex items-center gap-2">
+        <Star
+          className="h-5 w-5 text-caramel fill-caramel"
+          strokeWidth={1.5}
+        />
 
-            <span className="font-display text-2xl">
-              {RATING}
-            </span>
-          </div>
-
-          <span className="hidden sm:block h-6 w-px bg-[hsl(var(--cream))]/25" />
-
-          <span className="font-sans text-sm tracking-wide">
-            {REVIEW_COUNT} Reviews
-          </span>
-
-          <span className="hidden sm:block h-6 w-px bg-[hsl(var(--cream))]/25" />
-
-          <span className="font-sans text-sm tracking-wide text-[hsl(var(--cream))]/80">
-            One of Ottawa&apos;s highest-rated dessert
-            destinations
-          </span>
-        </div>
+        <span className="font-display text-2xl leading-none">
+          {RATING}
+        </span>
       </div>
+
+      <span className="h-5 w-px bg-[hsl(var(--cream))]/30" />
+
+      <a
+        href={GOOGLE_REVIEWS_URL}
+        target="_blank"
+        rel="noreferrer"
+        className="font-sans text-sm font-semibold tracking-wide hover:text-caramel transition-colors"
+      >
+        {REVIEW_COUNT} Google Reviews
+      </a>
+    </div>
+
+    <p className="mt-3 text-sm tracking-wide text-[hsl(var(--cream))]/75">
+      One of Ottawa&apos;s highest-rated dessert destinations
+    </p>
+  </div>
+</div>
 
       {/* Moving product strip */}
       <div className="bg-beige text-forest py-3 overflow-hidden border-y border-border">
