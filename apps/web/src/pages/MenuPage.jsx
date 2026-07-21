@@ -24,7 +24,7 @@ export default function MenuPage() {
 
   const featuredImage = `${
     import.meta.env.BASE_URL
-  }BirthdayCake.jpg`;
+  }BirthdayCake.svg`;
 
   return (
     <Layout>
