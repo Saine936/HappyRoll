@@ -132,63 +132,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Experience split */}
-      <section className="bg-chocolate text-[hsl(var(--cream))]">
-        <div className="mx-auto max-w-[90rem] grid lg:grid-cols-2 items-stretch">
-          <div className="grid grid-cols-2">
-            <img src={IMG.prepping} alt="Staff preparing rolled ice cream fresh on a cold plate" loading="lazy" className="h-full w-full object-cover aspect-square" />
-            <img src={IMG.rolling} alt="Rolled ice cream being scraped and rolled" loading="lazy" className="h-full w-full object-cover aspect-square" />
-          </div>
-          <div className="p-8 md:p-16 flex flex-col justify-center">
-            <Reveal>
-              <p className="font-sans text-xs font-medium uppercase tracking-luxe text-[hsl(var(--cream))] mb-4">The experience</p>
-              <h2 className="font-display font-bold text-3xl md:text-5xl leading-tight">Dessert Made Fresh in Front of You</h2>
-              <p className="mt-5 text-[hsl(var(--cream))]/85 text-lg leading-relaxed max-w-xl">
-                At Happy Rolls, dessert is more than something you eat—it is an experience. Watch rolled ice cream come together right before your eyes, enjoy warm handcrafted waffles and discover creative flavours made for sharing.
-              </p>
-              <Btn to="/menu" variant="strawberry" size="lg" className="mt-8 self-start">Explore the Menu</Btn>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Why */}
-      <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-[90rem] px-6">
-          <Reveal><SectionTitle eyebrow="Why Ottawa loves us" center className="max-w-2xl">Why Customers Love Happy Rolls</SectionTitle></Reveal>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {WHY.map((w, i) => <Reveal key={w.title} delay={i * 60}>
-                <div className="bg-card rounded-3xl p-7 h-full border border-border/60 hover:border-caramel/50 transition-colors">
-                  <span className="grid place-items-center h-14 w-14 rounded-2xl bg-pistachio/25 text-chocolate mb-5"><w.icon className="h-7 w-7" strokeWidth={1.75} /></span>
-                  <h3 className="font-display font-bold text-xl text-chocolate">{w.title}</h3>
-                  <p className="mt-2 text-muted-foreground text-sm leading-relaxed">{w.text}</p>
-                </div>
-              </Reveal>)}
-          </div>
-        </div>
-      </section>
-
-      {/* Banana pudding feature */}
-      <section className="bg-[hsl(var(--muted))]">
-        <div className="mx-auto max-w-[90rem] grid lg:grid-cols-2 items-center gap-10 px-6 py-20 md:py-28">
-          <Reveal className="order-2 lg:order-1">
-            <p className="font-sans text-xs font-medium uppercase tracking-luxe text-forest mb-4">Signature dessert</p>
-            <h2 className="font-display font-bold text-chocolate text-3xl md:text-5xl leading-tight">Ottawa's Must-Try Banana Pudding</h2>
-            <p className="mt-5 text-muted-foreground text-lg leading-relaxed max-w-xl">
-              Creamy, rich and layered with comforting flavours, Happy Rolls' banana pudding has become one of the shop's most talked-about desserts.
-            </p>
-            <ul className="mt-6 flex flex-wrap gap-3">
-              {['Classic Banana Pudding', 'Banana Cookie Butter', 'Strawberry'].map(f => <li key={f} className="rounded-full bg-card px-4 py-2 font-display font-medium text-chocolate border border-border">{f}</li>)}
-            </ul>
-            <Btn to="/menu#pudding" variant="primary" size="lg" className="mt-8">See Banana Pudding Flavours</Btn>
-          </Reveal>
-          <Reveal className="order-1 lg:order-2 grid grid-cols-2 gap-4">
-            <img src={IMG.bananaPudding} alt="Classic banana pudding with cookie crumbs and banana slices" loading="lazy" className="rounded-3xl object-cover aspect-[3/4] w-full shadow-lg" />
-            <img src={IMG.strawBanana} alt="Strawberry banana pudding" loading="lazy" className="rounded-3xl object-cover aspect-[3/4] w-full shadow-lg mt-8" />
-          </Reveal>
-        </div>
-      </section>
-
       {/* Reviews preview */}
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-[90rem] px-6">
@@ -208,27 +151,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Instagram gallery */}
-      <section className="bg-forest text-[hsl(var(--cream))] py-24 md:py-32">
-        <div className="mx-auto max-w-[90rem] px-6 sm:px-8">
-          <Reveal className="text-center max-w-2xl mx-auto">
-            <p className="font-sans text-xs uppercase tracking-luxe text-[hsl(var(--cream))]/70 mb-4">Instagram</p>
-            <h2 className="font-display text-4xl md:text-5xl">{INSTAGRAM_HANDLE}</h2>
-            <p className="mt-5 text-[hsl(var(--cream))]/75 leading-relaxed">A feed as fresh as our desserts — new flavours, seasonal specials and behind-the-scenes moments.</p>
-          </Reveal>
-          <div className="mt-14 columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-4 [column-fill:_balance]">
-            {GALLERY.map((g, i) => <a key={i} href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="group relative mb-3 md:mb-4 block overflow-hidden rounded-sm break-inside-avoid">
-                <img src={g} alt="Happy Rolls dessert on Instagram" loading="lazy" className={`w-full object-cover group-hover:scale-[1.05] transition-transform duration-700 ${i % 3 === 0 ? 'aspect-[3/4]' : 'aspect-square'}`} />
-                <span className="absolute inset-0 bg-forest-deep/0 group-hover:bg-[hsl(var(--forest-deep))]/40 transition-colors duration-500 grid place-items-center">
-                  <Instagram className="h-6 w-6 text-[hsl(var(--cream))] opacity-0 group-hover:opacity-100 transition-opacity duration-500" strokeWidth={1.5} />
-                </span>
-              </a>)}
-          </div>
-          <div className="mt-12 text-center">
-            <Btn href={INSTAGRAM_URL} target="_blank" rel="noreferrer" variant="caramel" size="lg"><Instagram className="h-5 w-5" strokeWidth={1.6} /> Follow on Instagram</Btn>
-          </div>
-        </div>
-      </section>
 
       {/* Location preview */}
       <section className="py-20 md:py-28">
@@ -250,20 +172,6 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
-
-      {/* Final CTA */}
-      <section className="relative py-24 md:py-32">
-        <img src={IMG.customers} alt="Customers enjoying Happy Rolls desserts" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-[hsl(var(--espresso))]/80" />
-        <div className="relative mx-auto max-w-3xl px-6 text-center text-white">
-          <h2 className="font-display font-bold text-4xl md:text-6xl">Your Next Dessert Stop Is Waiting</h2>
-          <p className="mt-5 text-lg text-white/90">Visit Happy Rolls on Wellington Street and discover fresh rolled ice cream, banana pudding, warm waffles, chocolate strawberries and more.</p>
-          <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Btn href={GOOGLE_MAPS_URL} target="_blank" rel="noreferrer" variant="strawberry" size="lg"><MapPin className="h-5 w-5" /> Get Directions</Btn>
-            <Btn href={`tel:${PHONE_TEL}`} variant="caramel" size="lg"><Phone className="h-5 w-5" /> Call {PHONE}</Btn>
-            <Btn to="/menu" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white hover:!text-chocolate">View the Menu</Btn>
-          </div>
-        </div>
-      </section>
+        
     </Layout>;
 }
