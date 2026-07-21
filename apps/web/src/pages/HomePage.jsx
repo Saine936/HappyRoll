@@ -143,7 +143,8 @@ export default function HomePage() {
     <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
       <div className="flex items-center gap-2">
        <span
-  className="text-2xl leading-none text-caramel"
+  className="text-2xl leading-none"
+  style={{ color: "#F6C453" }}
   aria-hidden="true"
 >
   ★
