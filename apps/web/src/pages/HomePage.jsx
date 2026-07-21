@@ -253,66 +253,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Specialty drinks */}
-      <section className="bg-beige">
-        <div className="mx-auto max-w-[90rem] px-6 sm:px-8 py-20 md:py-24 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <Reveal className="order-2 lg:order-1">
-            <p className="font-sans text-xs uppercase tracking-luxe text-forest mb-4">
-              Specialty Drinks
-            </p>
-
-            <h2 className="font-display text-3xl md:text-5xl text-chocolate leading-[1.1]">
-              Sip Something Special
-            </h2>
-
-            <p className="mt-5 text-muted-foreground leading-relaxed max-w-md">
-              From our caramelized banana oat latte to
-              seasonal creations and specialty coffee, our
-              drinks are crafted with the same care as our
-              desserts.
-            </p>
-
-            <ul className="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-4">
-              {[
-                "Caramelized Banana Oat Latte",
-                "Seasonal Lattes",
-                "Iced Coffee",
-                "Specialty Coffee",
-              ].map((drink) => (
-                <li
-                  key={drink}
-                  className="flex items-center gap-3 border-b border-border pb-3 font-display text-lg text-chocolate"
-                >
-                  <span className="h-1.5 w-1.5 rounded-full bg-forest" />
-                  {drink}
-                </li>
-              ))}
-            </ul>
-
-            <p className="mt-6 text-sm text-muted-foreground italic">
-              Available as seasonal offerings—ask in store
-              for today&apos;s menu.
-            </p>
-          </Reveal>
-
-          <Reveal className="order-1 lg:order-2 grid grid-cols-2 gap-4">
-            <img
-              src={IMG.hotChoc}
-              alt="Specialty drink at Happy Rolls"
-              loading="lazy"
-              className="rounded-2xl object-cover aspect-[3/4] w-full"
-            />
-
-            <img
-              src={IMG.customers}
-              alt="Guests enjoying drinks at Happy Rolls"
-              loading="lazy"
-              className="rounded-2xl object-cover aspect-[3/4] w-full mt-10"
-            />
-          </Reveal>
-        </div>
-      </section>
-
       {/* Reviews */}
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-[90rem] px-6">

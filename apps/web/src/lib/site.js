@@ -2,7 +2,7 @@
 // PLACEHOLDERS (replace before publishing):
 export const INSTAGRAM_URL = "https://instagram.com/happyrollsdessertbar";
 export const INSTAGRAM_HANDLE = "@happyrollsdessertbar";
-export const GOOGLE_REVIEWS_URL = "https://www.google.com/maps"; // PLACEHOLDER: Google reviews link
+export const GOOGLE_REVIEWS_URL = "https://www.google.com/search?sca_esv=7cd595ac914176fe&rlz=1C1UEAD_enCA1126CA1126&biw=1920&bih=911&sxsrf=APpeQnu9DjCEEyvdyhxuBn5ZkcNw7fLf3Q:1784621405384&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_1uccB6w054QlCOERGDpJmbaAaV2PmibdQ-_ED2rsSnc6JNqeChC2tlParDkpwPwJw7t5Xg-AfGmN6BrAmPhJMx1qFTg&q=Happy+Rolls+Reviews&sa=X&ved=2ahUKEwj2sLTnqOOVAxXhvokEHYdeJMQQ0bkNegQIKhAF"; // PLACEHOLDER: Google reviews link
 export const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Happy+Rolls+1195+Wellington+St+W+Ottawa"; // PLACEHOLDER: exact Google Maps URL
 export const CONTACT_FORM_ENDPOINT = ""; // PLACEHOLDER: contact form destination
 
