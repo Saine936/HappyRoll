@@ -24,7 +24,7 @@ export default function MenuPage() {
 
   const featuredImage = `${
     import.meta.env.BASE_URL
-  }birthday-cake-banana-pudding.jpg`;
+  }BirthdayCake.jpg`;
 
   return (
     <Layout>
